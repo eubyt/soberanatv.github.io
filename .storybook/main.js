@@ -27,4 +27,7 @@ module.exports = {
 		builder: '@storybook/builder-webpack5',
 	},
 	staticDirs: ['../public'],
+	features: {
+		previewMdx2: true,
+	},
 };
