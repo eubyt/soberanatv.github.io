@@ -1,26 +1,25 @@
-import React, { HTMLAttributes, HtmlHTMLAttributes, PropsWithChildren } from 'react';
+import type {HTMLAttributes, PropsWithChildren} from 'react';
+import React from 'react';
 
 export enum ButtonVariants {
-    PRIMARY = 'bg-white text-pink',
-    SECONDARY = 'bg-pink text-white' 
+	PRIMARY = 'bg-white text-pink',
+	SECONDARY = 'bg-pink text-white',
 }
 
-interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
-    variant?: ButtonVariants;
-}
+type ButtonProps = {
+	variant?: ButtonVariants;
+} & HTMLAttributes<HTMLButtonElement>;
 
 export const Button = ({
-    children,
-    className,
-    variant = ButtonVariants.PRIMARY,
-    ...props
-}: PropsWithChildren<ButtonProps>) => {
-    return (
-        <button
-            {...props}
-            className={`${className} px-6 py-2 rounded-[100px] ${variant} text-base flex justify-center align-center font-medium`}
-        >
-            {children}
-        </button>
-    )
-}
+	children,
+	className,
+	variant = ButtonVariants.PRIMARY,
+	...props
+}: PropsWithChildren<ButtonProps>) => (
+	<button
+		{...props}
+		className={`${className ?? ''} rounded-[100px] px-6 py-2 ${variant} flex items-center justify-center text-base font-medium`}
+	>
+		{children}
+	</button>
+);
