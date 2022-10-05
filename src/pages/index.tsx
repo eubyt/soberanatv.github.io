@@ -2,9 +2,10 @@
 import React from 'react';
 import type {NextPage} from 'next';
 import Head from 'next/head';
-import {getPageProps} from 'util/markdown_cms';
 import type {MDXRemoteSerializeResult} from 'next-mdx-remote';
 import {MDXRemote} from 'next-mdx-remote';
+import {getPageProps} from '@/util/markdown_cms';
+import {Header, HeaderVariants} from '@/components/Header';
 
 type HomeProps = {
 	frontmatter: {
@@ -24,7 +25,16 @@ const Home: NextPage<HomeProps> = ({content, frontmatter}) => (
 			<link rel='icon' href='/favicon.ico' />
 		</Head>
 		<main className='bg-black text-white'>
-			<MDXRemote {...content} />
+			{/* <div className='max-w-screen-2xl mx-auto'>
+				<div className='h-screen' style={{
+					backgroundImage: 'url(/images/bg_1.png)',
+					backgroundRepeat: 'no-repeat',
+					backgroundSize: 'cover',
+					backgroundPosition: 'center',
+				}}>
+					<Header variant={HeaderVariants.ALT} />
+				</div>
+			</div> */}
 		</main>
 	</>
 );

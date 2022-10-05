@@ -4,6 +4,7 @@
 		"dbaeumer.vscode-eslint",
 		"mikestead.dotenv",
 		"csstools.postcss",
-		"EditorConfig.EditorConfig"
+		"editorconfig.editorconfig",
+		"unifiedjs.vscode-mdx"
 	]
 }

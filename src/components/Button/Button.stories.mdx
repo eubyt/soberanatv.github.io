@@ -4,18 +4,45 @@ import { Button, ButtonVariants } from ".";
 
 <Meta title="Components/Button" component={Button} />
 
+export const Template = (args) => <Button {...args}></Button>;
+
 # Button
 
 With `MDX`, we can define a story for `Button` right in the middle of our Markdown documentation.
 
 <Canvas>
-	<Story name="Primary">
-		<Button>Soberana</Button>
+	<Story
+		name="Primary"
+		args={{
+			variant: ButtonVariants.PRIMARY,
+			children: "Soberana",
+		}}
+	>
+		{Template.bind({})}
 	</Story>
 </Canvas>
 
 <Canvas>
-	<Story name="Secondary">
-		<Button variant={ButtonVariants.SECONDARY}>Soberana</Button>
+	<Story
+		name="Secondary"
+		args={{
+			variant: ButtonVariants.SECONDARY,
+			children: "Soberana",
+		}}
+	>
+		{Template.bind({})}
+	</Story>
+</Canvas>
+
+<Canvas>
+	<Story
+		name="Transparent"
+		args={{
+			variant: ButtonVariants.TRANSPARENT,
+			children: "Soberana",
+			className: "text-pink",
+		}}
+	>
+		{Template.bind({})}
 	</Story>
 </Canvas>
