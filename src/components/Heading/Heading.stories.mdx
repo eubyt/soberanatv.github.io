@@ -1,0 +1,30 @@
+<!-- Heading.stories.mdx -->
+
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+import { Heading } from '.';
+
+<Meta title="Components/Heading" component={Heading} />
+
+export const Template = (args) => <Heading {...args} />;
+
+# Heading
+
+With `MDX`, we can define a story for `Heading` right in the middle of our Markdown documentation.
+
+<Canvas>
+    <Story 
+        name="Heading" 
+        argTypes={{
+            title: {
+                description: 'Title',
+                control: 'text' 
+            }
+        }}
+        args={{
+            title: 'Soberana', 
+        }}
+    >
+        {Template.bind({})}
+    </Story>
+</Canvas>
