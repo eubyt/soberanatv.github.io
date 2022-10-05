@@ -25,16 +25,11 @@ const Home: NextPage<HomeProps> = ({content, frontmatter}) => (
 			<link rel='icon' href='/favicon.ico' />
 		</Head>
 		<main className='bg-black text-white'>
-			{/* <div className='max-w-screen-2xl mx-auto'>
-				<div className='h-screen' style={{
-					backgroundImage: 'url(/images/bg_1.png)',
-					backgroundRepeat: 'no-repeat',
-					backgroundSize: 'cover',
-					backgroundPosition: 'center',
-				}}>
-					<Header variant={HeaderVariants.ALT} />
-				</div>
-			</div> */}
+			<div className='h-screen bg-no-repeat bg-cover bg-center' style={{
+				backgroundImage: 'url(/images/bg_1.png)',
+			}}>
+				<Header variant={HeaderVariants.ALT} />
+			</div>
 		</main>
 	</>
 );
