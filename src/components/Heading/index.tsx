@@ -15,7 +15,7 @@ export const Heading = ({
 		{...props}
 	>
 		<span className='block h-1 w-36 bg-pink' />
-		<span>{title}</span>
+		<span className='select-none'>{title}</span>
 		<span className='absolute left-5 top-10 text-3xl text-white lg:left-12 lg:text-6xl'>
 			{title}
 		</span>

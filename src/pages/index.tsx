@@ -6,10 +6,13 @@ import type {MDXRemoteSerializeResult} from 'next-mdx-remote';
 import {MDXRemote} from 'next-mdx-remote';
 import {getPageProps} from '@/util/markdown_cms';
 import {Header, HeaderVariants} from '@/components/Header';
+import {Button} from '@/components/Button';
+import {Heading} from '@/components/Heading';
 
 type HomeProps = {
 	frontmatter: {
 		title: string;
+		heading_primary: string;
 	};
 	content: MDXRemoteSerializeResult;
 };
@@ -25,10 +28,21 @@ const Home: NextPage<HomeProps> = ({content, frontmatter}) => (
 			<link rel='icon' href='/favicon.ico' />
 		</Head>
 		<main className='bg-black text-white'>
-			<div className='h-screen bg-no-repeat bg-cover bg-center' style={{
+			<div className='bg-no-repeat bg-cover bg-center' style={{
 				backgroundImage: 'url(/images/bg_1.png)',
 			}}>
 				<Header variant={HeaderVariants.ALT} />
+				<div className='max-w-screen-2xl mx-auto px-12'>
+					<div className='py-60'>
+						<h1 className='text-6xl font-medium w-2/5'>{frontmatter.heading_primary}</h1>
+						<Button className='mt-4' icon='discord'>Junte-se ao Discord</Button>
+					</div>
+				</div>
+			</div>
+			<div className='py-6'>
+				<div className='max-w-screen-2xl mx-auto px-12'>
+					<Heading title='criadores'/>
+				</div>
 			</div>
 		</main>
 	</>
