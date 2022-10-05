@@ -23,3 +23,7 @@ export const IconList = {
 
 export type TypeIconList = keyof typeof IconList;
 
+export const Icon = ({name}: {
+	name: TypeIconList;
+}) => <div className='text-3xl'>{IconList[name]}</div>;
+

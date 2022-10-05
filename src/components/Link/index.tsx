@@ -1,7 +1,8 @@
 import type {HTMLAttributes, PropsWithChildren} from 'react';
 import React from 'react';
-import type {TypeIconList} from '@/components/icon';
-import {IconList} from '@/components/icon';
+import type {TypeIconList} from '@/components/Icon';
+import {Icon} from '@/components/Icon';
+import {IconList} from '@/components/Icon';
 
 type LinkProps = {
 	icon?: TypeIconList;
@@ -17,9 +18,12 @@ export const Link = ({
 }: PropsWithChildren<LinkProps>) => (
 	<a
 		{...props}
-		className={`${className ?? ''} rounded-[100px] px-6 py-2 text-white flex items-center justify-center text-base ${font}`}
+		className={`${className ?? ''} px-6 py-2 text-white flex items-center justify-center text-base space-x-3 ${font}`}
 	>
-		{icon && IconList[icon] && <span className={`${children ? 'mr-3' : ''} text-3xl`}>{IconList[icon]}</span>}
-		{children}
+		{icon && IconList[icon] && <Icon name={icon} />}
+		<span>
+			{children}
+		</span>
 	</a>
 );
+

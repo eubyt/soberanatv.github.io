@@ -4,7 +4,11 @@ import { Link } from ".";
 
 <Meta title="Components/Link" component={Link} />
 
-export const Template = (args) => <Link {...args} />;
+export const Template = (args) => (
+	<div className="flex">
+		<Link {...args} />
+	</div>
+);
 
 # Link
 

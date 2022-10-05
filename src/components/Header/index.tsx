@@ -19,7 +19,7 @@ export const Header = ({
 			<div className='w-52'>
 				<Logo />
 			</div>
-			<div className='flex space-x-6'>
+			<div className='flex space-x-3'>
 				<Link icon='home' font='font-normal'>Início</Link>
 				<Link icon='peaplo' font='font-normal'>Criadores</Link>
 				<Link icon='article' font='font-normal'>Manifesto</Link>

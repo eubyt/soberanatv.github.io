@@ -8,6 +8,7 @@ import {getPageProps} from '@/util/markdown_cms';
 import {Header, HeaderVariants} from '@/components/Header';
 import {Button} from '@/components/Button';
 import {Heading} from '@/components/Heading';
+import {Criadores} from '@/containers/criadores';
 
 type HomeProps = {
 	frontmatter: {
@@ -39,10 +40,9 @@ const Home: NextPage<HomeProps> = ({content, frontmatter}) => (
 					</div>
 				</div>
 			</div>
+
 			<div className='py-6'>
-				<div className='max-w-screen-2xl mx-auto px-12'>
-					<Heading title='criadores'/>
-				</div>
+				<Criadores />
 			</div>
 		</main>
 	</>
