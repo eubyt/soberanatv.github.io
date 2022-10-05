@@ -3,13 +3,14 @@ import React from 'react';
 import type {NextPage} from 'next';
 import Head from 'next/head';
 import {getPageProps} from 'util/markdown_cms';
+import type {MDXRemoteSerializeResult} from 'next-mdx-remote';
 import {MDXRemote} from 'next-mdx-remote';
 
 type HomeProps = {
 	frontmatter: {
 		title: string;
 	};
-	content: any;
+	content: MDXRemoteSerializeResult;
 };
 
 const Home: NextPage<HomeProps> = ({content, frontmatter}) => (
