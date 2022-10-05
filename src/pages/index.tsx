@@ -3,12 +3,13 @@ import React from 'react';
 import type {NextPage} from 'next';
 import Head from 'next/head';
 import {getPageProps} from 'util/markdown_cms';
+import {MDXRemote} from 'next-mdx-remote';
 
 type HomeProps = {
 	frontmatter: {
 		title: string;
 	};
-	content: string;
+	content: any;
 };
 
 const Home: NextPage<HomeProps> = ({content, frontmatter}) => (
@@ -21,8 +22,8 @@ const Home: NextPage<HomeProps> = ({content, frontmatter}) => (
 			/>
 			<link rel='icon' href='/favicon.ico' />
 		</Head>
-		<main className='bg-black'>
-			<h1 className='text-white' dangerouslySetInnerHTML={{__html: content}} />
+		<main className='bg-black text-white'>
+			<MDXRemote {...content} />
 		</main>
 	</>
 );
