@@ -1,24 +1,23 @@
-import React, { HtmlHTMLAttributes, PropsWithChildren } from 'react';
+import type {HtmlHTMLAttributes} from 'react';
+import React from 'react';
 
-interface HeadingProps extends HtmlHTMLAttributes<HTMLHeadingElement> {
-    title: string;
-}
+type HeadingProps = {
+	title: string;
+} & HtmlHTMLAttributes<HTMLHeadingElement>;
 
 export const Heading = ({
-    title,
-    className,
-    ...props
-}: HeadingProps) => {
-    return (
-        <h2
-            className={`${className} relative font-head inline-flex flex-col text-orange text-5xl lg:text-9xl`}
-            {...props}
-        >
-            <span className='w-36 block bg-pink h-1' />
-            <span>{title}</span>
-            <span  className='text-white text-3xl lg:text-6xl absolute left-5 lg:left-12 top-10'>
-                {title}
-            </span>
-        </h2>
-    )
-}
+	title,
+	className,
+	...props
+}: HeadingProps) => (
+	<h2
+		className={`${className ?? ''} relative inline-flex flex-col font-head text-5xl text-orange lg:text-9xl`}
+		{...props}
+	>
+		<span className='block h-1 w-36 bg-pink' />
+		<span className='select-none'>{title}</span>
+		<span className='absolute left-5 top-10 text-3xl text-white lg:left-12 lg:text-6xl'>
+			{title}
+		</span>
+	</h2>
+);

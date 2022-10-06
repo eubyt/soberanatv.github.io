@@ -1,21 +1,59 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
 
-const Home: NextPage = () => {
-  return (
-    <>
-      <Head>
-        <title>Soberana TV</title>
-        <meta name="description" content="Coletivo marxista-leninista de criadores de conteúdo." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-        <main className='bg-black'>
-          <h1 className='text-white font-bold text-4xl lg:text-6xl'>
-            Coletivo marxista-leninista de criadores de conteúdo.
-          </h1>
-        </main>
-    </>
-  )
+import React from 'react';
+import type {NextPage} from 'next';
+import Head from 'next/head';
+import type {MDXRemoteSerializeResult} from 'next-mdx-remote';
+import {MDXRemote} from 'next-mdx-remote';
+import {getPageProps} from '@/util/markdown_cms';
+import {Header, HeaderVariants} from '@/components/Header';
+import {Button} from '@/components/Button';
+import {Heading} from '@/components/Heading';
+import {Criadores} from '@/containers/criadores';
+
+type HomeProps = {
+	frontmatter: {
+		title: string;
+		heading_primary: string;
+	};
+	content: MDXRemoteSerializeResult;
+};
+
+const Home: NextPage<HomeProps> = ({content, frontmatter}) => (
+	<>
+		<Head>
+			<title>{frontmatter.title}</title>
+			<meta
+				name='description'
+				content='Coletivo marxista-leninista de criadores de conteúdo.'
+			/>
+			<link rel='icon' href='/favicon.ico' />
+		</Head>
+		<main className='bg-black text-white'>
+			<div className='bg-no-repeat bg-cover bg-center' style={{
+				backgroundImage: 'url(/images/bg_1.png)',
+			}}>
+				<Header variant={HeaderVariants.ALT} />
+				<div className='max-w-screen-2xl mx-auto px-12'>
+					<div className='py-60'>
+						<h1 className='text-6xl font-medium w-2/5'>{frontmatter.heading_primary}</h1>
+						<Button className='mt-4' icon='discord'>Junte-se ao Discord</Button>
+					</div>
+				</div>
+			</div>
+
+			<div className='py-6'>
+				<Criadores />
+			</div>
+		</main>
+	</>
+);
+
+export async function getStaticProps() {
+	const propsPage = await getPageProps('home_page');
+
+	return {
+		props: propsPage,
+	};
 }
 
-export default Home
+export default Home;

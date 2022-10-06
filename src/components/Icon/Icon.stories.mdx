@@ -1,0 +1,17 @@
+import { Meta, Title, IconGallery, IconItem } from "@storybook/addon-docs/";
+
+import { IconList, Icon } from ".";
+
+<Meta title="Components/Icon" />
+
+export const ListIcon = () => (
+	<IconGallery>
+		{Object.keys(IconList).map((icon) => (
+			<IconItem name={icon}>
+				<Icon name={icon} />
+			</IconItem>
+		))}
+	</IconGallery>
+);
+
+<ListIcon />
