@@ -27,7 +27,7 @@ export const Button = ({
 }: PropsWithChildren<ButtonProps>) => (
 	<button
 		{...props}
-		className={`${className ?? ''} rounded-[100px] px-6 py-2 ${variant} flex items-center justify-center text-base ${font}`}
+		className={`${className ?? ''} rounded-[100px] px-6 py-2 ${variant} flex items-center justify-center text-base space-x-3 ${font}`}
 	>
 		{icon && IconList[icon] && <Icon name={icon} />}
 		<span>
