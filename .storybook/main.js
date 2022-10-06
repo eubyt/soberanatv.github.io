@@ -28,7 +28,7 @@ module.exports = {
 	core: {
 		builder: '@storybook/builder-webpack5',
 	},
-	staticDirs: ['../public'],
+	staticDirs: ['../public'], // O previewMdx2: true resolve o problema "mdx_js_react__WEBPACK_IMPORTED_MODULE_8_.mdx"
 	features: {
 		previewMdx2: true,
 	},
