@@ -17,8 +17,6 @@ export const IconList = {
 	article: <MdOutlineArticle />,
 	peaplo: <MdOutlinePeople />,
 	menu: <MdOutlineMenu />,
-
-	undefined: null,
 };
 
 export type TypeIconList = keyof typeof IconList;

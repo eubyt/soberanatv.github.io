@@ -1,34 +1,17 @@
-import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Meta, Title, IconGallery, IconItem } from "@storybook/addon-docs/";
 
 import { IconList, Icon } from ".";
 
 <Meta title="Components/Icon" />
 
 export const ListIcon = () => (
-	<div>
+	<IconGallery>
 		{Object.keys(IconList).map((icon) => (
-			<div
-				style={{
-					margin: "10px",
-					display: "flex",
-				}}
-			>
+			<IconItem name={icon}>
 				<Icon name={icon} />
-				<div
-					className="text-xs"
-					style={{
-						margin: "0 10px",
-						display: "flex",
-						alignItems: "center",
-					}}
-				>
-					{icon}
-				</div>
-			</div>
+			</IconItem>
 		))}
-	</div>
+	</IconGallery>
 );
-
-With `MDX`, we can define a story for `Icon` right in the middle of our Markdown documentation.
 
 <ListIcon />
