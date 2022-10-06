@@ -21,7 +21,7 @@ export const Card = ({
 	hashtag,
 	link,
 }: CardProps) => (
-	<div className='flex border-2 flex-col border-pink w-3/12'>
+	<div className='flex border-2 flex-col border-pink min-w-full sm:min-w-0'>
 		<div className='p-3'>
 			<h3 className='text-2xl text-white'>{title}</h3>
 			<p className='text-sm text-white'>{description}</p>
