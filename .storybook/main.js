@@ -29,9 +29,6 @@ module.exports = {
 		builder: '@storybook/builder-webpack5',
 	},
 	staticDirs: ['../public'],
-	features: {
-		previewMdx2: true,
-	},
 	async webpackFinal(config) { // 👈 and add this here
 		config.resolve.alias = {
 			...config.resolve.alias,
