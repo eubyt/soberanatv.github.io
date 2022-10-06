@@ -20,6 +20,9 @@ module.exports = {
 				blackAlt: '#000000',
 			},
 		},
+		screens: {
+			'2xl': '1538px',
+		},
 	},
 	plugins: [],
 };

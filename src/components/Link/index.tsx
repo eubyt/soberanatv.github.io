@@ -11,6 +11,7 @@ type LinkProps = {
 	iconFontSize?: string;
 } & HTMLAttributes<HTMLAnchorElement>;
 
+// TODO:Hover temporário
 export const Link = ({
 	children,
 	icon = undefined,
@@ -22,7 +23,7 @@ export const Link = ({
 }: PropsWithChildren<LinkProps>) => (
 	<a
 		{...props}
-		className={`${className ?? ''} px-6 py-2 text-white flex items-center justify-center ${fontSize} space-x-3 ${font}`}
+		className={`${className ?? ''} px-6 py-2 text-white flex items-center justify-center ${fontSize} space-x-3 ${font} hover:border-b-4 hover:border-pink hover:cursor-pointer ease-in duration-100`}
 	>
 		{icon && IconList[icon] && <Icon name={icon} fontSize={iconFontSize} />}
 		<span>

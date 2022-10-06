@@ -35,7 +35,7 @@ const Home: NextPage<HomeProps> = ({content, frontmatter}) => (
 				backgroundImage: 'url(/images/bg_1.png)',
 			}}>
 				<Header variant={HeaderVariants.ALT} />
-				<div className='max-w-screen-2xl mx-auto px-12'>
+				<div className='max-w-screen-2xl mx-auto px-12 2xl:px-0'>
 					<div className='py-60'>
 						<h1 className='text-6xl font-medium w-2/5'>{frontmatter.heading_primary}</h1>
 						<Button className='mt-4' icon='discord'>Junte-se ao Discord</Button>
