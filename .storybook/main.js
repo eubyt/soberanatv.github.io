@@ -29,7 +29,10 @@ module.exports = {
 		builder: '@storybook/builder-webpack5',
 	},
 	staticDirs: ['../public'],
-	async webpackFinal(config) { // 👈 and add this here
+	features: {
+		previewMdx2: true,
+	},
+	async webpackFinal(config) {
 		config.resolve.alias = {
 			...config.resolve.alias,
 			'@': path.resolve(__dirname, '../src/'),
