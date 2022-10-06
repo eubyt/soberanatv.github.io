@@ -2,8 +2,8 @@ import {Card} from '@/components/Card';
 import {Heading} from '@/components/Heading';
 import React from 'react';
 
-export const Criadores = () => (<div className='max-w-screen-2xl mx-auto px-12'>
-	<Heading title='criadores'/>
+export const Projetos = () => (<div className='max-w-screen-2xl mx-auto px-12'>
+	<Heading title='Projetos'/>
 	<div className='flex space-x-6 my-12'>
 		<Card
 			title='Soberana'

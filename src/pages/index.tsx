@@ -9,6 +9,8 @@ import {Header, HeaderVariants} from '@/components/Header';
 import {Button} from '@/components/Button';
 import {Heading} from '@/components/Heading';
 import {Criadores} from '@/containers/criadores';
+import {Anuncio} from '@/containers/anuncio';
+import {Projetos} from '@/containers/projetos';
 
 type HomeProps = {
 	frontmatter: {
@@ -28,7 +30,7 @@ const Home: NextPage<HomeProps> = ({content, frontmatter}) => (
 			/>
 			<link rel='icon' href='/favicon.ico' />
 		</Head>
-		<main className='bg-black text-white'>
+		<main className='bg-blackAlt text-white'>
 			<div className='bg-no-repeat bg-cover bg-center' style={{
 				backgroundImage: 'url(/images/bg_1.png)',
 			}}>
@@ -40,9 +42,14 @@ const Home: NextPage<HomeProps> = ({content, frontmatter}) => (
 					</div>
 				</div>
 			</div>
-
-			<div className='py-6'>
+			<div className='py-20'>
 				<Criadores />
+			</div>
+			<div className='py-20 bg-black'>
+				<Anuncio />
+			</div>
+			<div className='py-20'>
+				<Projetos />
 			</div>
 		</main>
 	</>

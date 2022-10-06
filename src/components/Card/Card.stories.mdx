@@ -1,0 +1,46 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import { Card } from ".";
+
+<Meta title="Components/Card" component={Card} />
+
+export const Template = (args) => (
+	<div
+		style={{
+			width: "90vw",
+		}}
+	>
+		<Card {...args}></Card>
+	</div>
+);
+
+# Header
+
+With `MDX`, we can define a story for `Card` right in the middle of our Markdown documentation.
+
+<Canvas>
+	<Story
+		name="Card"
+		args={{
+			title: "Soberana",
+			description: "Descrição",
+			hashtag: "#teste #teste2",
+			link: [
+				{
+					name: "youtube",
+					url: "https://www.google.com",
+				},
+				{
+					name: "twitch",
+					url: "https://www.google.com",
+				},
+				{
+					name: "tiktok",
+					url: "https://www.google.com",
+				},
+			],
+		}}
+	>
+		{Template.bind({})}
+	</Story>
+</Canvas>

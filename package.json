@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
+		"next:dev": "next dev",
 		"dev": "ts-node server/index.ts",
 		"lint": "next lint",
 		"storybook": "start-storybook -p 6006",
