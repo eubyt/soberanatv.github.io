@@ -2,6 +2,8 @@ import React from 'react';
 import { render, screen } from '@testing-library/react'
 import {Button, ButtonVariants} from '.';
 
+// TODO: Adicionar mais testes como "hover", "focus" e "disabled".
+// TODO: Refatorar as variantes.
 describe('ButtonComponent', () => {
 	it('should render a text', () => {
 		const textToFind = 'Eu sou um botão';
