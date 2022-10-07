@@ -21,6 +21,8 @@ module.exports = {
 			},
 		},
 		screens: {
+			smh: {raw: '(min-height: 640px)'},
+			esm: '350px', // Extra-small
 			sm: '640px',
 			md: '768px',
 			lg: '1024px',

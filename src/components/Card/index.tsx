@@ -21,7 +21,7 @@ export const Card = ({
 	hashtag,
 	link,
 }: CardProps) => (
-	<div className='flex border-2 flex-col border-pink min-w-full sm:min-w-0'>
+	<div className='flex border-2 flex-col border-pink max-w-xs w-full'>
 		<div className='p-3'>
 			<h3 className='text-2xl text-white'>{title}</h3>
 			<p className='text-sm text-white'>{description}</p>
@@ -32,9 +32,9 @@ export const Card = ({
 		<div className='p-3'>
 			<p className='text-sm text-white'>{hashtag}</p>
 		</div>
-		<div className='p-3 flex space-x-3'>
+		<div className='p-3 flex space-x-3 justify-start esm:justify-center overflow-auto hover:overflow-scroll no-scrollbar'>
 			{link.map(item => (
-				<Button className='px-2.5 capitalize' key={item.name} icon={item.name} variant={ButtonVariants.SECONDARY} font='font-normal' iconFontSize='text-xl'>
+				<Button className='!px-2.5 capitalize !text-sm' key={item.name} icon={item.name} variant={ButtonVariants.SECONDARY} font='font-normal' iconFontSize='text-lg'>
 					{item.name}
 				</Button>
 			))}

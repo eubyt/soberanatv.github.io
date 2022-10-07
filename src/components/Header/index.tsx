@@ -15,7 +15,7 @@ type PropsHeader = {
 export const Header = ({
 	variant = HeaderVariants.PRIMARY,
 }: PropsHeader) => (
-	<header className={`${variant} text-white py-6 px-6 lg:px-12 w-full bg-opacity-60`}>
+	<header className={`${variant} text-white py-6 px-6 lg:px-12 w-full bg-opacity-60 smh:absolute`}>
 		<div className='max-w-screen-2xl mx-auto flex justify-between'>
 			<div className='w-52'>
 				<Logo />

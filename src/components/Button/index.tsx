@@ -25,13 +25,12 @@ export const Button = ({
 	className,
 	variant = ButtonVariants.PRIMARY,
 	font = 'font-medium',
-	fontSize = 'text-base',
 	iconFontSize = 'text-3xl',
 	...props
 }: PropsWithChildren<ButtonProps>) => (
 	<button
 		{...props}
-		className={`${className ?? ''} rounded-[100px] px-6 py-2 ${variant} flex items-center justify-center ${fontSize} space-x-3 ${font}`}
+		className={`${className ?? ''} rounded-[100px] px-3 md:px-6 py-2 ${variant} flex items-center justify-center text-sm md:text-base space-x-1 md:space-x-1 ${font}`}
 	>
 		{icon && IconList[icon] && <Icon name={icon} fontSize={iconFontSize}/>}
 		<span>

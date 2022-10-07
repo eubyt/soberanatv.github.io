@@ -1,11 +1,88 @@
 import {Card} from '@/components/Card';
+import {Container} from '@/components/Container';
 import {Heading} from '@/components/Heading';
 import React from 'react';
 
 export const Projetos = () => (
-	<div className='max-w-screen-2xl mx-auto px-6 lg:px-12 2xl:px-0'>
-		<Heading title='Projetos'/>
-		<div className='flex space-x-6 my-12'>
+	<Container>
+		<Heading title='projetos'/>
+		<div className='flex space-x-6 my-12 overflow-auto hover:overflow-scroll no-scrollbar'>
+			<Card
+				title='Soberana'
+				description='Descrição'
+				hashtag='#teste #teste2'
+				link={[
+					{
+						name: 'youtube',
+						url: 'https://www.google.com',
+					},
+					{
+						name: 'twitch',
+						url: 'https://www.google.com',
+					},
+					{
+						name: 'tiktok',
+						url: 'https://www.google.com',
+					},
+				]} image={''}
+			/>
+			<Card
+				title='Soberana'
+				description='Descrição'
+				hashtag='#teste #teste2'
+				link={[
+					{
+						name: 'youtube',
+						url: 'https://www.google.com',
+					},
+					{
+						name: 'twitch',
+						url: 'https://www.google.com',
+					},
+					{
+						name: 'tiktok',
+						url: 'https://www.google.com',
+					},
+				]} image={''}
+			/>
+			<Card
+				title='Soberana'
+				description='Descrição'
+				hashtag='#teste #teste2'
+				link={[
+					{
+						name: 'youtube',
+						url: 'https://www.google.com',
+					},
+					{
+						name: 'twitch',
+						url: 'https://www.google.com',
+					},
+					{
+						name: 'tiktok',
+						url: 'https://www.google.com',
+					},
+				]} image={''}
+			/>
+			<Card
+				title='Soberana'
+				description='Descrição'
+				hashtag='#teste #teste2'
+				link={[
+					{
+						name: 'youtube',
+						url: 'https://www.google.com',
+					},
+					{
+						name: 'twitch',
+						url: 'https://www.google.com',
+					},
+					{
+						name: 'tiktok',
+						url: 'https://www.google.com',
+					},
+				]} image={''}
+			/>
 			<Card
 				title='Soberana'
 				description='Descrição'
@@ -26,4 +103,5 @@ export const Projetos = () => (
 				]} image={''}
 			/>
 		</div>
-	</div>);
+	</Container>
+);

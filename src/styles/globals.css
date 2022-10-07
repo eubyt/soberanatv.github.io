@@ -3,7 +3,18 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family: Roboto;
-  }
+	html {
+		font-family: Roboto;
+	}
+}
+
+@layer base {
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
 }
